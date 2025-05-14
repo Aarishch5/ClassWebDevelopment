@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Power Calculator</title>
+</head>
+<body>
+
+  <h2>Power Calculator</h2>
+
+  <label for="base">Enter Base:</label>
+  <input type="number" id="base"><br><br>
+
+  <label for="exponent">Enter Exponent:</label>
+  <input type="number" id="exponent"><br><br>
+
+  <button onclick="calculatePower()">Calculate</button>
+
+</body>
+
+<script>
+    function calculatePower() {
+      // Get values from input fields
+      let base = parseFloat(document.getElementById("base").value);
+      let exponent = parseFloat(document.getElementById("exponent").value);
+
+      // Validate input
+      if (isNaN(base) || isNaN(exponent)) {
+        alert("Please enter valid numbers!");
+        return;
+      }
+
+      // Calculate power
+      let result = Math.pow(base, exponent);
+
+      // Display result
+      alert(base + " raised to the power of " + exponent + " is " + result);
+    }
+  </script>
+</html>
